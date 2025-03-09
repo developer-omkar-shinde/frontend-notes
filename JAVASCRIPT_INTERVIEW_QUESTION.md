@@ -10,7 +10,7 @@
 
 - The event loop continuously checks whether the call stack is empty and whether there are pending tasks in the callback queue or microtask queue.
 
-## 🚀 Q3. What is the difference between null and undefined in JavaScript?
+## 🚀 What is the difference between null and undefined in JavaScript?
 
 - undefined is the default state of value. it automatically assign when verialble is declered.
 
