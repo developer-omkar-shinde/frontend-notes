@@ -1,6 +1,6 @@
 # ------------------- Javascript Notes ------------------
 
-## [Callback in Javascript](#Callback-in-Javascript)
+## [Callback in Javascript](#callback-in-javascript)
 
 # --------- All Array Iteration Methods ---------
 
@@ -564,7 +564,7 @@ bob → Employee.prototype → Person.prototype → Object.prototype → null
 
 ---
 
-# -------------- Callback in Javascript -----------------
+# Callback in Javascript
 
 A callback is a function that is passed as an argument to another function and is executed later. The receiving function calls the callback function at an appropriate time.
 
