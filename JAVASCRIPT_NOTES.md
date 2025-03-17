@@ -1,6 +1,6 @@
 # ------------------- Javascript Notes ------------------
 
----
+## [Callback in Javascript](#Callback-in-Javascript)
 
 # --------- All Array Iteration Methods ---------
 
