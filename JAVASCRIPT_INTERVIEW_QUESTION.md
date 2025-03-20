@@ -50,6 +50,8 @@ A promise is created using new Promise() constructor. which t which akes a funti
 3️⃣ Promise.allSettled([]) → Waits for all promises to settle  
 4️⃣ Promise.any([]) → Returns first fulfilled promise
 
+## 🚀 What is constructor function?
+
 ## 🚀 Q3. What is the difference between null and undefined in JavaScript? ✅
 
 undefined is the default state of value. it automatically assign when verialble is declered.
@@ -95,6 +97,8 @@ Concatenating Arrays or Obj
 🔹Optimize Loops & Iterations
 
 ## 🚀 What is memoization, and how can you implement it in JavaScript? ✅
+
+## 🚀 Explain some features of ES6 ✅
 
 ## 🚀 What is the difference between microtasks and macrotasks in JavaScript?
 
@@ -178,13 +182,13 @@ All three are use to store data in brower storage. but there are some diffrences
 
 ## 🚀 what is the diffrence beetween normal funtion and fat arrow funtion. ✅
 
-## 🚀 What is the difference between a for...of loop and for...in loop?
+## 🚀 What is the difference between a for...of loop and for...in loop? ✅
 
-## 🚀 Explain Object.seal(), Object.freeze(), and Object.preventExtensions().
+## 🚀 Explain Object.freeze(), Object.seal() and Object.preventExtensions(). ✅
 
-## 🚀 What is the difference between slice and splice?
+## 🚀 What is the difference between slice and splice? ✅
 
-## 🚀 What is a first class function?
+## 🚀 What is a first class function? ✅
 
 ## 🚀
 
@@ -203,8 +207,6 @@ Prototypal inheritance is a feature in JavaScript that allows objects to inherit
 
 ## 🚀 What is debouncing and throttling? ✅
 
-## 🚀 Difference Between Synchronous and Asynchronous Iterators in JavaScript
-
 ## 🚀 What are some common JavaScript security vulnerabilities, and how do you prevent them?
 
 ## 🚀 What is the difference between .call(), .apply(), and .bind()?
@@ -213,9 +215,13 @@ Prototypal inheritance is a feature in JavaScript that allows objects to inherit
 
 ## 🚀 EventEmitter in JavaScript
 
+## 🚀 How would you implement a custom event emitter in JavaScript?
+
 ## 🚀 What are some common JavaScript design patterns?
 
-## 🚀 How does this work in different contexts?
+## 🚀 Explain the Factory, Singleton, Observer, and Decorator patterns in JavaScript.
+
+## 🚀 How does _this_ work in different contexts?
 
 ## 🚀 How would you optimize a React/JavaScript application for performance?
 
@@ -225,23 +231,17 @@ Prototypal inheritance is a feature in JavaScript that allows objects to inherit
 
 ## 🚀 How would you implement multiple inheritance in JavaScript?
 
-## 🚀 Explain the Factory, Singleton, Observer, and Decorator patterns in JavaScript.
-
 ## 🚀 How would you implement dependency injection in JavaScript?
 
 ## 🚀 What is the module pattern in JavaScript?
 
 ## 🚀 What are the SOLID principles, and how do they apply to JavaScript?
 
-## 🚀 What are the common security vulnerabilities in JavaScript?
-
 ## 🚀 How do you prevent Cross-Site Scripting (XSS) attacks in JavaScript?
 
 ## 🚀 What is Content Security Policy (CSP), and how does it protect web applications?
 
 ## 🚀 How do you prevent prototype pollution attacks?
-
-## 🚀 How would you implement a custom event emitter in JavaScript?
 
 ## 🚀 How would you implement a simple caching mechanism in JavaScript? ✅
 
@@ -255,6 +255,6 @@ Prototypal inheritance is a feature in JavaScript that allows objects to inherit
 
 ## 🚀 How does the browser optimize JavaScript execution using JIT compilation?
 
-## 🚀 MutationObserver in JavaScript
+## 🚀 MutationObserver in JavaScript ✅
 
 ## 🚀 Constructors in JavaScript
