@@ -18,7 +18,7 @@ for (let i = 0; i < arr.length; i++) {
 
 ### 2️⃣ forEach()
 
-🔹 Executes a function once for each array element.  
+🔹 Executes a function once for each array element. .
 🔹 Does NOT return a new array.
 
 ```javascript
