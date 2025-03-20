@@ -1,6 +1,9 @@
-# ------------------- Javascript Notes ------------------
+# ------------------- Javascript Notes ----------------
 
-## [Callback in Javascript](#callback-in-javascript)
+[Prototype](#prototype-in-javascript)  
+[Callback](#callback-in-javascript)  
+[Promises](#promises-in-javascript)  
+[Async Await](#async-await)
 
 # --------- All Array Iteration Methods ---------
 
@@ -564,7 +567,7 @@ bob → Employee.prototype → Person.prototype → Object.prototype → null
 
 ---
 
-# Callback in Javascript
+# --------------- Callback in Javascript ---------------
 
 A callback is a function that is passed as an argument to another function and is executed later. The receiving function calls the callback function at an appropriate time.
 
@@ -725,7 +728,7 @@ myPromise
 
 ---
 
----
+[Go to top](#javascript-notes)
 
 # ------------------ Async Await ------------------
 
@@ -748,3 +751,7 @@ async function getUserData() {
 
 getUserData();
 ```
+
+[Go to top](#javascript-notes)
+
+# ------------------ Async Await ------------------
