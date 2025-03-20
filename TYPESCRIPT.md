@@ -90,11 +90,11 @@ console.log(multiply(5)); // ✅ 10
 
 ---
 
-## Objects & Interfaces in TypeScript
+## 🚀 Objects & Interfaces in TypeScript
 
 Now that you know basic types, let’s learn how to structure objects and enforce type safety using interfaces and type aliases.
 
-### 🚀 Defining Object Types
+### Defining Object Types
 
 ```typescript
 const user = { name: "Alice", age: 25 };
@@ -108,7 +108,7 @@ const user: { name: string; age: number } = { name: "Alice", age: 25 };
 
 This ensures that user must always have a name (string) and age (number).
 
-### 🚀 Using Interfaces -
+### Using Interfaces -
 
     Interfaces are used to define the shape of an object.
 
@@ -146,7 +146,7 @@ const user: User = { id: 101, name: "Alice" };
 user.id = 102; // ❌ Error: Cannot assign to 'id' because it is a read-only property.
 ```
 
-### 🚀Using Type Aliases -
+### Using Type Aliases -
 
 type is similar to interface, but more flexible. but we cannot extends
 
@@ -159,7 +159,7 @@ type User = {
 const user: User = { name: "Alice", age: 25 };
 ```
 
-### 🚀 Extending Interfaces -
+### Extending Interfaces -
 
 You can extend an interface using **extends**.
 
@@ -185,7 +185,7 @@ type Employee = Person & { jobTitle: string };
 const emp: Employee = { name: "Alice", age: 25, jobTitle: "Developer" };
 ```
 
-### 🚀 Function Interfaces -
+### Function Interfaces -
 
 You can define function signatures inside an interface.
 
@@ -202,7 +202,7 @@ console.log(add(5, 10)); // ✅ 15
 
 ---
 
-## 🚀 Classes & OOP in TypeScript
+## Classes & OOP in TypeScript
 
 ---
 
@@ -413,9 +413,11 @@ console.log(circle.getArea()); // ✅ 78.54
 
 ---
 
-## 🚀 Generics in TypeScript
+## 🚀 Generics in TypeScript (Creating Reusable and Flexible Types)
 
 ### 🔹 1. Basic Generics in Functions
+
+Generics allow us to write flexible, reusable components while maintaining strong typing. They enable a function, class, or interface to work with any type instead of a specific one.
 
 Without generics, we would need separa te functions for different types:
 
@@ -482,6 +484,31 @@ const numberBox = new Box<number>(123);
 console.log(numberBox.getContent()); // ✅ 123
 ```
 
+```typescript
+class DataStorage<T> {
+  private data: T[] = [];
+
+  addItem(item: T) {
+    this.data.push(item);
+  }
+
+  removeItem(item: T) {
+    this.data = this.data.filter((i) => i !== item);
+  }
+
+  getItems() {
+    return [...this.data];
+  }
+}
+
+const textStorage = new DataStorage<string>();
+textStorage.addItem("Apple");
+textStorage.addItem("Banana");
+console.log(textStorage.getItems()); // ✅ ["Apple", "Banana"]
+```
+
+✔️ The class works with any data type while keeping type safety.
+
 ### 🔹 4. Generics with Interfaces
 
 ```typescript
@@ -496,7 +523,7 @@ const pair2: Pair<boolean, string> = { first: true, second: "Active" };
 console.log(pair1, pair2);
 ```
 
-### 🔹 5. Generics with Constraints (extends)
+### 🔹 5. Generics with Constraints (extends) -
 
 We can restrict a generic type using **extends**.
 
@@ -510,9 +537,34 @@ console.log(getLength([1, 2, 3, 4])); // ✅ 4
 // console.log(getLength(100)); // ❌ Error: 'number' does not have a 'length' property
 ```
 
+Example - 2
+
+```typescript
+function merge<T extends object, U extends object>(obj1: T, obj2: U): T & U {
+  return { ...obj1, ...obj2 };
+}
+
+const mergedObj = merge({ name: "Alice" }, { age: 25 });
+console.log(mergedObj); // ✅ { name: "Alice", age: 25 }
+```
+
 Here, **T** must have a **length** property (like string, array, or object with length).
 
-### 🔹 6. Using Multiple Generics
+### 🔹 6. keyof Constraint – Restricting Generic Keys
+
+```typescript
+function getProperty<T, K extends keyof T>(obj: T, key: K) {
+  return obj[key];
+}
+
+const person = { name: "Bob", age: 30 };
+console.log(getProperty(person, "name")); // ✅ "Bob"
+// console.log(getProperty(person, "height")); ❌ Error: "height" doesn't exist in `person`
+```
+
+✔️ keyof T ensures the key exists in the given object.
+
+### 🔹 7. Using Multiple Generics
 
 ```typescript
 function merge<T, U>(obj1: T, obj2: U): T & U {
@@ -963,6 +1015,42 @@ type GreetReturnType = GetReturnType<typeof greet>; // ✅ string
 ```
 
 ✔️ Use cases: Extracting function return types, auto-generating types.
+
+### 🔹 4. Exclude, Extract, and NonNullable Utility Types (pending learning)
+
+TypeScript has built-in utility types that leverage conditional types.
+
+✅ Exclude<T, U> – Remove Types
+
+```typescript
+type T1 = Exclude<"a" | "b" | "c", "a">; // ✅ "b" | "c"
+```
+
+✅ Extract<T, U> – Keep Only Matching Types
+
+```typescript
+type T2 = Extract<"a" | "b" | "c", "a" | "b">; // ✅ "a" | "b"
+```
+
+✅ NonNullable<T> – Remove null & undefined
+
+```typescript
+type T3 = NonNullable<string | null | undefined>; // ✅ string
+```
+
+---
+
+---
+
+## 🚀 TypeScript Generics – Creating Reusable and Flexible Types
+
+Generics allow us to write flexible, reusable components while maintaining strong typing. They enable a function, class, or interface to work with any type instead of a specific one.
+
+✅ Why Use Generics?
+
+- Avoids duplicate code for different types.
+- Preserves type safety while keeping flexibility.
+- Used in functions, interfaces, and classes.
 
 ---
 
