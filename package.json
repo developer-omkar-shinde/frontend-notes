@@ -1,0 +1,24 @@
+{
+  "name": "frontend-notes",
+  "version": "1.0.0",
+  "description": "frontend notes and DSA",
+  "keywords": [
+    "frontend",
+    "DSA"
+  ],
+  "homepage": "https://github.com/developer-omkar-shinde/frontend-notes#readme",
+  "bugs": {
+    "url": "https://github.com/developer-omkar-shinde/frontend-notes/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/developer-omkar-shinde/frontend-notes.git"
+  },
+  "license": "ISC",
+  "author": "Omkar Shinde",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
+}
