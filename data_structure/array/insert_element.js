@@ -8,10 +8,6 @@ const insertInArray = (array, position, newElement) => {
   const data = [...array];
 
   for (let i = data.length - 1; i >= 0; i--) {
-    const currentEle = data[i];
-    console.log("ele", currentEle);
-    console.log("index", i);
-
     if (i >= position) {
       data[i + 1] = data[i];
       if (position === i) {
