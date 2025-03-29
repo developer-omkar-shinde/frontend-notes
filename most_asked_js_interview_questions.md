@@ -30,33 +30,32 @@ Hoisting is JavaScript's default behavior of moving declarations to the top of t
 
 ## 🚀 How does JavaScript handle asynchronous operations, and what are the differences between callbacks, promises, and async/await? ✅
 
-these tools allow js to perform asynchronous non-blocking operations, such as featching data from server or reading file.
+These tools allow JS to perform asynchronous non-blocking operations, such as fetching data from a server or reading a file.
 
 ## 🚀 Callback in js ✅
+The callback is a function passed to another function as an argument, which executes after the completion of an asynchronous operation.
+It has some cons, like callback hell when dealing with multiple asynchronous operations.
 
-callback is funtion passes to another funtion as an argument which exicutes after completion of async operation.
-it has some cons like callback hell when dealing with multiple async oprations.
+## 🚀 What are Promises in JS? explain in detail. ✅
 
-## 🚀 What is Promises in JS? explain in detail. ✅
+Promises are objects designed to handle async operations. They were introduced in ES6 to avoid callback hell.
 
-A promises is an object that designed to handle async oprations. its introduced in ES6 to avoid callback hell.
+A promise is created using the new Promise() constructor, which takes a function with two parameters. First is resolve, which is called when the operation is successful, and 2nd is reject, which calls on rejection of the operation.
 
-A promise is created using new Promise() constructor. which t which akes a funtions with two parameters. first is resolve which calls when operations is successfull and 2nd is reject which calls on rejection of opration.
-
-**js provide utility methods to handle multiple promises -**
+**js provides utility methods to handle multiple promises -**
 
 1️⃣ Promise.all([]) → Waits for all promises to resolve  
 2️⃣ Promise.race([]) → Returns first settled promise  
 3️⃣ Promise.allSettled([]) → Waits for all promises to settle  
 4️⃣ Promise.any([]) → Returns first fulfilled promise
 
-## 🚀 What is constructor function?
+## 🚀 What is a constructor function?
 
 ## 🚀 Q3. What is the difference between null and undefined in JavaScript? ✅
 
-undefined is the default state of value. it automatically assign when verialble is declered.
+undefined is the default state of value. It automatically assigns when the variable is declared.
 
-null is intentionally assign empty value. represent absence of value.
+null is intentionally assigned an empty value. represent absence of value.
 
 ## 🚀 How does JavaScript handle memory management, and what is garbage collection? ✅
 
@@ -81,7 +80,7 @@ If not found anywhere, it throws a ReferenceError.
 
 In JavaScript, var, let, and const are used to declare variables, but they differ in terms of scope, hoisting, and mutability.
 
-## 🚀 What is the spread/rest operator, and how is it useful? diffrence beetween spred and rest. ✅
+## 🚀 What is the spread/rest operator, and how is it useful? difference between spread and rest. ✅
 
 spread -
 Copying Arrays or Objects:
@@ -102,29 +101,57 @@ Concatenating Arrays or Obj
 
 ## 🚀 What is the difference between microtasks and macrotasks in JavaScript?
 
-both are used for manage async oprations, microtask has high priority then microtask (callback queue) and
-microtask queue stores - Promises & MutationObserver & queueMicrotask (manually added MT)
-callback queue (microtask) holds - setTimeout / setInterval, MessageChannel,
+Both are used for managing async operations, microtask has a higher priority than macrotasks (callback queue).
+microtasks queue stores - Promises & MutationObserver & queueMicrotask (manually added MT)
+callback queue (macrotasks) holds - setTimeout / setInterval, MessageChannel,
+
+In JavaScript, microtasks and macrotasks (also called tasks) are two types of asynchronous operations managed by the event loop. The key difference lies in their priority and execution order.
+
+1. Microtasks
+   - Microtasks are processed immediately after the currently executing script and before any macrotasks.
+   - They have higher priority than macrotasks.
+   - Examples of microtasks:
+   - Promises (.then, .catch, .finally)
+   - MutationObserver
+   - queueMicrotask (explicitly scheduling a microtask)
+
+2. Macrotasks (Tasks)
+   - Macrotasks are processed after microtasks are completed and typically involve tasks that interact with the browser or external events.
+   - These tasks are placed in the task queue, and the event loop picks them up in the next cycle.
+   - Examples of macrotasks:
+   - setTimeout / setInterval
+   - setImmediate (Node.js only)
+   - requestAnimationFrame
+   - I/O operations (e.g., reading files, network requests)
+
+Execution Order
+  - Run synchronous code.
+  - Process all pending microtasks.
+  - Pick the next macrotask from the queue.
+  - Repeat.
 
 ## 🚀 What is destructuring, and how does it work with arrays and objects? ✅
 
-destructing allows to extract values from array or object and assign them to veriable in single line.
+destructuring allows to extraction of values from an array or object and assigns them to a variable in a single line.
 
 ## 🚀 What are the different ways to manipulate the DOM in JavaScript? ✅
 
 ## 🚀 How would you implement infinite scrolling in vanilla JavaScript? ✅
 
-To achive this we can use Intersection Observers. whenever last element interact we load more data.
+To achieve this, we can use Intersection Observers. Whenever the last element interacts, we load more data.
 
 ## 🚀 What is the difference between deep copy and shallow copy? ✅
 
 <details>
-deep copy and shallow copy refer to how we are dublicating objects
+Deep copy and shallow copy refer to how we are duplicating objects
 
 A shallow copy creates a new object, but it only copies the top-level properties of the original object. If the object contains nested objects, those nested objects are not duplicated; instead, their references are copied.
 
 A deep copy creates a new object and recursively copies all nested objects or arrays, ensuring that no references to the original nested objects are shared.
 
+Example
+- shallow copy Methods	Object.assign(), Spread (...).
+- Deep copy JSON.parse(JSON.stringify(obj), structuredClone(), lodash _.cloneDeep()
 </details>
 
 ## 🚀 How does JavaScript internally handle type coercion? ✅
@@ -139,8 +166,8 @@ Type coercion in JavaScript is the automatic conversion of one data type into an
 
 ## 🚀 How do function expressions and function declarations differ in terms of hoisting? ✅
 
-both declaration is fully hoisted means the funtion is moved to top of its scope along with its defination.
-but funtion expression is partially hoisted. it hoist only veriable not a funtion. if the variable is declear with var and you try to console it before initialization it will print undefined but with const and let we will get Refrence error.
+Both declaration is fully hoisted means the function is moved to the top of its scope along with its definition.
+But function expression is partially hoisted. It hoists only a variable, not a function. If the variable is declared with var and you try to console it before initialization, it will print undefined, but with const and let, we will get a ReferenceError.
 
 ## 🚀 What are the different types of scopes in JavaScript? ✅
 
@@ -163,10 +190,10 @@ An Immediately Invoked Function Expression is a function that is defined and exe
 
 In JavaScript, both objects and Maps are used to store collections of key-value pairs. but their are few diffrences.
 
-1. Oject allow only string and number as key but in map we can use any datetype as key.
-2. Order of key in object is unordered but Map maintains order.
-3. Object is slower for frequent addition or delition of data as compare to Map
-4. for stuctured data like JSON we can use Object and for large data lookup we can use Map (eg. cashing and lookup tables)
+1. An object allows only strings and numbers as keys, but in the map, we can use any data type as a key.
+2. The order of keys in the object is unordered, but the Map maintains order.
+3. Object is slower for frequent addition or deletion of data as compared to Map
+4. For structured data like JSON, we can use Object, and for large data lookup, we can use Map (eg, caching and lookup tables)
 
 ## 🚀 What is function composition? ✅
 
@@ -174,21 +201,34 @@ funtion composition is the technique where you combine multiple funtions into si
 
 ## 🚀How does localStorage differ from sessionStorage and cookies? ✅
 
-All three are use to store data in brower storage. but there are some diffrences -
+All three are used to store data in browser storage. But there are some differences -
 
-1. Storage limit of localStorage and sessionStorage is between 5-10 Mb but cookies has only 4KB storage.
+1. The storage limit of localStorage and sessionStorage is between 5-10 Mb, but cookies have only 4KB storage.
 2. LocalStorage never clear until you manually close. sessionStorage expires on brower close. we can add Max-Age for cookie when we set cookie.
-3. Cookie is accesible on both server-side and client side.
+3. Cookies are accessible on both the server-side and client-side.
 
-## 🚀 what is the diffrence beetween normal funtion and fat arrow funtion. ✅
+## 🚀 What is the difference between a normal function and a fat arrow function? ✅
 
-## 🚀 What is the difference between a for...of loop and for...in loop? ✅
+## 🚀 What is the difference between a for...of loop and a for...in loop? ✅
 
 ## 🚀 Explain Object.freeze(), Object.seal() and Object.preventExtensions(). ✅
+  Comparison Table
+Feature	| Object.freeze() |	Object.seal()|	Object.preventExtensions()
+Modify  | existing properties? | 	❌ No	✅ | Yes	✅ Yes
+Add new properties? | 	❌ No | 	❌ No	❌ |  No
+Delete properties?	| ❌ No	 | ❌ No	 | ✅ Yes
+Affects nested objects? |	❌ No  (unless frozen separately)	| ❌ No |	❌ No
 
 ## 🚀 What is the difference between slice and splice? ✅
 
-## 🚀 What is a first class function? ✅
+## 🚀 What is a first-class function? ✅
+A first-class function is a function that is treated like any other value in a programming language. This means that functions can be:
+✅ Assigned to variables
+✅ Passed as arguments to other functions
+✅ Returned from other functions
+✅ Stored in data structures like arrays or objects
+
+
 
 ## 🚀
 
@@ -205,7 +245,7 @@ Prototypal inheritance is a feature in JavaScript that allows objects to inherit
 
 </details>
 
-## 🚀 What is debouncing and throttling? ✅
+## 🚀 What are debouncing and throttling? ✅
 
 ## 🚀 What are some common JavaScript security vulnerabilities, and how do you prevent them?
 
