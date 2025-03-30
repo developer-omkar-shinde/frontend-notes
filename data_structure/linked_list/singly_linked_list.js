@@ -35,10 +35,10 @@ class LinkedList {
       return;
     }
 
-    let i = 1;
+    let i = 0;
     let lead = this.head;
 
-    while (i < index && lead.next !== null) {
+    while (i < index - 1 && lead.next !== null) {
       lead = lead.next;
       i++;
     }
