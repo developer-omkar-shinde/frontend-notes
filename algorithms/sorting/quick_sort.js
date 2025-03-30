@@ -1,11 +1,35 @@
 const quickSort = (arr) => {
-  let pivot = 0;
-  let i = 1;
-  let j = arr.length - 1;
+  if (arr?.length <= 1) return arr;
 
-  while (condition) {}
+  const pivot = arr[0];
+  const left = [];
+  const right = [];
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < pivot) {
+      left.push(arr[i]);
+    } else {
+      right.push(arr[i]);
+    }
+  }
+
+  return [...quickSort(left), pivot, ...quickSort(right)];
 };
 
-[4, 1, 2, 6, 8];
+const result = quickSort([3, 5, 1, 8, 44, 22]);
 
-3.5 - 6 - 9 - 12;
+console.log(result);
+
+// -------------------------- in place implementation --------------------------------
+
+// const partition = (arr, low, hight) => {
+//   let pivot = 0;
+//   let i = 1;
+//   let j = arr.length - 1;
+
+//   while (condition) {}
+// };
+
+// const quickSort = (arr) => {
+//   partition(arr);
+// };
