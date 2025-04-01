@@ -299,6 +299,8 @@ console.log(x === undefined); // ✅ true
 
 # ----------- Prototype in Javascript --------
 
+prototype is a mechanism that allows objects to inherit properties and methods from other objects. It forms the foundation of prototypal inheritance,
+
 A prototype is an object that is associated with every function and object in JavaScript.
 
 When you create a function, JavaScript automatically adds a prototype property to it. This prototype object is shared among all instances created using that function as a constructor.

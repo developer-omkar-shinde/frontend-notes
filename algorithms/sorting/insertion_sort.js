@@ -5,16 +5,12 @@ function insertionSort() {
       array[j + 1] = array[j];
       j--;
     }
-
     array[j + 1] = array[i];
   }
-
   return array;
 }
 
 const array = [2, 3, 4, 1, 5];
-
 const sortedArr = insertionSort(array);
 
 console.log(sortedArr);
- 
