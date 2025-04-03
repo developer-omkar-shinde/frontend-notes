@@ -43,23 +43,24 @@ class Tree {
     }
   }
 
-  searchRecurtion = (root, val) => {
+  _searchRecurtion = (root, val) => {
     if (root === null) {
       return false;
     } else if (val === root.value) {
       return true;
     } else if (val < root.value) {
-      return this.searchRecurtion(root.left, val);
+      return this._searchRecurtion(root.left, val);
     } else {
-      return this.searchRecurtion(root.right, val);
+      return this._searchRecurtion(root.right, val);
     }
   };
 
   search(val) {
     if (!this.root) return null;
-    const res = this.searchRecurtion(this.root, val);
+    return this._searchRecurtion(this.root, val);
   }
 
+  //Depth-First Search (DFS)
   inOrderTravers = (root) => {
     if (root) {
       this.inOrderTravers(root.left);
@@ -80,6 +81,30 @@ class Tree {
       if (current.right) {
         queue.push(current.right);
       }
+    }
+  };
+
+  breadthFirstSearch = (valueToSearch) => {
+    const queue = [this.root];
+    while (queue.length) {
+      const current = queue.shift();
+
+      if (current.value === valueToSearch) return current;
+
+      if (current.left) queue.push(current.left);
+      if (current.right) queue.push(current.right);
+    }
+  };
+
+  depthFirstSearch = (root, searchQuery) => {
+    if (!root) return null;
+
+    if (root.value === searchQuery) return root;
+
+    if (searchQuery < root.value) {
+      return this.depthFirstSearch(root.left, searchQuery);
+    } else {
+      return this.depthFirstSearch(root.right, searchQuery);
     }
   };
 

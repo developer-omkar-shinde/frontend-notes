@@ -1,8 +1,6 @@
 deleteElementOfArray = (array, position) => {
   for (let i = position; i < array.length - 1; i++) {
     const ele = array[i];
-
-    console.log(ele);
     array[i] = array[i + 1];
   }
 

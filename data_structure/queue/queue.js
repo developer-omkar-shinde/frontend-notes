@@ -6,7 +6,7 @@ class Queue {
 
   isEmpty() {
     if (this.items.length === 0) {
-      console.log("Queue is full");
+      console.log("Queue is empty");
       return true;
     }
   }
@@ -20,14 +20,10 @@ class Queue {
 
   enqueue(newItem) {
     if (this.isFull()) {
-      console.log("Queue is full");
+      return;
     } else {
       this.items[this.items.length] = newItem;
     }
-  }
-
-  peek() {
-    return this.isEmpty() ? "Queue is empty" : this.items[0];
   }
 
   dequeue() {
@@ -39,6 +35,14 @@ class Queue {
       }
       this.items.length = this.items.length - 1;
     }
+  }
+
+  peek() {
+    return this.isEmpty() ? "Queue is empty" : this.items[0];
+  }
+
+  size() {
+    return this.items.length;
   }
 
   print() {

@@ -1,8 +1,6 @@
 class Stack {
-  item = [];
-  currentSize;
-  maxSize;
   constructor(size) {
+    this.item = [];
     this.maxSize = size;
     this.currentSize = this.item.length;
   }
@@ -17,7 +15,7 @@ class Stack {
   }
 
   pop() {
-    if (this.item.length === 0) {
+    if (this.currentSize === 0) {
       console.warn("Stack is empty");
     } else {
       this.item.length = this.currentSize - 1;
@@ -33,11 +31,11 @@ class Stack {
   }
 
   isEmpty() {
-    return this.item.length === 0;
+    return this.currentSize === 0;
   }
 
   size() {
-    return this.item.length;
+    return this.currentSize;
   }
 
   print() {
@@ -45,16 +43,14 @@ class Stack {
   }
 }
 
-const stack1 = new Stack(3);
-
+const stack1 = new Stack(5);
 stack1.push(2);
+j;
 stack1.push(4);
 stack1.push(3);
-stack1.push(3);
 
-stack1.pop();
 stack1.pop();
 
 stack1.print();
-
+console.log("stack size is", stack1.size());
 console.log("top ele", stack1.peek());
