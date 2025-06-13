@@ -1,25 +1,25 @@
-// console.log("Start");
+console.log("Start");
 
-// setTimeout(() => {
-//   console.log("Timeout 1");
-// }, 0);
+setTimeout(() => {
+  console.log("Timeout 1");
+}, 0);
 
-// Promise.resolve()
-//   .then(() => {
-//     console.log("Promise 1 resolved");
-//     setTimeout(() => {
-//       console.log("Timeout inside Promise");
-//     }, 0);
-//   })
-//   .then(() => {
-//     console.log("Promise 2 resolved");
-//   });
+Promise.resolve()
+  .then(() => {
+    console.log("Promise 1 resolved");
+    // setTimeout(() => {
+    //   console.log("Timeout inside Promise");
+    // }, 0);
+  })
+  .then(() => {
+    console.log("Promise 2 resolved");
+  });
 
-// setTimeout(() => {
-//   console.log("Timeout 2");
-// });
+setTimeout(() => {
+  console.log("Timeout 2");
+});
 
-// console.log("End");
+console.log("End");
 
 // --------------------------------------
 // const obj1 = {
