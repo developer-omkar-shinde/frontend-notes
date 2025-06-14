@@ -22,42 +22,45 @@ setTimeout(() => {
 console.log("End");
 
 // --------------------------------------
-// const obj1 = {
-//   name: "Sagar",
-//   number: 18,
-//   getName: function () {
-//     return `Hi ${this.name}`;
-//   },
-// };
 
-// const obj2 = Object.create(obj1);
 
-// console.log(obj1.getName());
-// console.log(obj2);
+const obj1 = {
+  name: "Sagar",
+  number: 18,
+  getName: function () {
+    return `Hi ${this.name}`;
+  },
+};
 
-// console.log(obj2.number);
-// console.log(obj2.getName());
+const obj2 = Object.create(obj1);
 
-// --------------------------------
-// function outer() {
-//   var count = 0;
+console.log(obj1.getName());
+console.log(obj2);
 
-//   function inner() {
-//     count++;
-//     console.log(count);
-//   }
+console.log(obj2.number);
+console.log(obj2.getName());
 
-//   return inner;
-// }
+// --------------------------------------
 
-// const fn1 = outer();
-// const fn2 = outer();
+function outer() {
+  var count = 0;
 
-// fn1();
-// fn2();
-// fn1();
-// fn1();
-// fn2();
+  function inner() {
+    count++;
+    console.log(count);
+  }
+
+  return inner;
+}
+
+const fn1 = outer();
+const fn2 = outer();
+
+fn1();
+fn2();
+fn1();
+fn1();
+fn2(); 
 
 // ---------------------------------------
 
